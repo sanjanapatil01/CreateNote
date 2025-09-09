@@ -1,0 +1,557 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  background-color: #000000 !important;
+  min-height: 100vh;
+}
+
+html {
+  background-color: #000000 !important;
+}
+
+/* Navigation Bar - Override inline styles */
+nav[style] {
+  background-color: #2a1a1a !important;
+  padding: 15px 30px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Navigation Links */
+nav a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: color 0.3s ease !important;
+  padding: 8px 12px !important;
+  border-radius: 5px !important;
+}
+
+nav a:hover {
+  color: #d4af37 !important;
+  background-color: rgba(90, 61, 61, 0.3) !important;
+}
+
+/* Navigation User Info */
+nav span {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+/* Navigation Buttons in Nav */
+nav button {
+  background-color: #5a3d3d !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+}
+
+nav button:hover {
+  background-color: #6b4a4a !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Dashboard Container - Target the main div with black background */
+div[style*="backgroundColor"][style*="black"],
+div[style*="background-color"][style*="black"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  padding: 30px !important;
+  min-height: calc(100vh - 120px) !important;
+}
+
+/* Dashboard Header - Welcome message */
+div[style*="display: flex"][style*="justifyContent: space-between"] h1 {
+  color: #ffffff !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+}
+
+/* Add Note Section Container */
+div[style*="marginTop: 20px"],
+div[style*="margin-top: 20px"] {
+  background-color: #1a1a1a !important;
+  padding: 25px !important;
+  border-radius: 12px !important;
+  margin: 20px 0 40px 0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid #3d2a2a !important;
+}
+
+/* Input Fields in Dashboard */
+input[style*="backgroundColor"][style*="#3d2a2a"],
+input[style*="background-color"][style*="#3d2a2a"] {
+  background-color: #2a1a1a !important;
+  border: 2px solid #3d2a2a !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  min-width: 200px !important;
+}
+
+input[style*="backgroundColor"][style*="#3d2a2a"]:focus,
+input[style*="background-color"][style*="#3d2a2a"]:focus {
+  border-color: #5a3d3d !important;
+  box-shadow: 0 0 0 3px rgba(90, 61, 61, 0.2) !important;
+  outline: none !important;
+}
+
+/* Textarea in Dashboard */
+textarea[style*="backgroundColor"][style*="#3d2a2a"],
+textarea[style*="background-color"][style*="#3d2a2a"] {
+  background-color: #2a1a1a !important;
+  border: 2px solid #3d2a2a !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+  font-size: 1rem !important;
+  min-height: 100px !important;
+  resize: vertical !important;
+  font-family: inherit !important;
+  transition: all 0.3s ease !important;
+}
+
+textarea[style*="backgroundColor"][style*="#3d2a2a"]:focus,
+textarea[style*="background-color"][style*="#3d2a2a"]:focus {
+  border-color: #5a3d3d !important;
+  box-shadow: 0 0 0 3px rgba(90, 61, 61, 0.2) !important;
+  outline: none !important;
+}
+
+/* Placeholder text color */
+input::placeholder,
+textarea::placeholder {
+  color: #888888 !important;
+}
+
+/* All Buttons */
+button[style*="backgroundColor"][style*="#5a3d3d"],
+button[style*="background-color"][style*="#5a3d3d"] {
+  background-color: #5a3d3d !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  margin: 5px !important;
+}
+
+button[style*="backgroundColor"][style*="#5a3d3d"]:hover,
+button[style*="background-color"][style*="#5a3d3d"]:hover,
+.note button:hover {
+  background-color: #6b4a4a !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(90, 61, 61, 0.4) !important;
+}
+
+/* Note Cards */
+div[style*="backgroundColor"][style*="#2a1d1d"],
+div[style*="background-color"][style*="#2a1d1d"] {
+  background-color: #1a1a1a !important;
+  border: 2px solid #3d2a2a !important;
+  border-radius: 12px !important;
+  padding: 25px !important;
+  margin-bottom: 20px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+div[style*="backgroundColor"][style*="#2a1d1d"]:hover,
+div[style*="background-color"][style*="#2a1d1d"]:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  border-color: #5a3d3d !important;
+}
+
+/* Note Titles */
+div[style*="#2a1d1d"] h3 {
+  color: #ffffff !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 15px !important;
+  line-height: 1.3 !important;
+}
+
+/* Note Content */
+div[style*="#2a1d1d"] p {
+  color: #e0e0e0 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+  word-wrap: break-word !important;
+}
+
+/* Notes Container */
+div[style*="marginTop"][style*="30px"] {
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Empty State Message */
+p:contains("No notes yet") {
+  text-align: center !important;
+  padding: 60px 20px !important;
+  color: #888888 !important;
+  font-size: 1.2rem !important;
+  font-style: italic !important;
+}
+
+/* Form Styles for Login/Register */
+form {
+  max-width: 500px !important;
+  margin: 50px auto !important;
+  padding: 40px !important;
+  background-color: #1a1a1a !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid #3d2a2a !important;
+}
+
+form h2 {
+  color: #ffffff !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100% !important;
+  padding: 15px !important;
+  margin: 10px 0 !important;
+  border: 2px solid #3d2a2a !important;
+  border-radius: 8px !important;
+  background-color: #2a1a1a !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  box-sizing: border-box !important;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  border-color: #5a3d3d !important;
+  box-shadow: 0 0 0 3px rgba(90, 61, 61, 0.2) !important;
+  outline: none !important;
+}
+
+form button[type="submit"] {
+  width: 100% !important;
+  background-color: #5a3d3d !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 15px !important;
+  border-radius: 8px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-top: 10px !important;
+}
+
+form button[type="submit"]:hover {
+  background-color: #6b4a4a !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Public Note Page */
+div[style*="padding: 20px"] {
+  max-width: 800px !important;
+  margin: 50px auto !important;
+  padding: 40px !important;
+  background-color: #1a1a1a !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid #3d2a2a !important;
+}
+
+div[style*="padding: 20px"] h2 {
+  color: #ffffff !important;
+  font-size: 2rem !important;
+  margin-bottom: 30px !important;
+  text-align: center !important;
+}
+
+/* General Text */
+p {
+  color: #ffffff !important;
+}
+
+/* Links */
+a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #d4af37 !important;
+}
+
+/* Add Note Form Layout - For all screen sizes */
+.note {
+  max-width: 600px !important;
+  margin: 20px auto 40px auto !important;
+}
+
+.note input[type="text"] {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+.note textarea {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+.note button {
+  width: 100% !important;
+  max-width: 200px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1a1a1a !important;
+  border-top: 2px solid #3d2a2a !important;
+  margin-top: 40px !important;
+  padding: 0 !important;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-brand {
+  color: #ffffff !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+  letter-spacing: -0.5px;
+}
+
+.footer-description {
+  color: #e0e0e0 !important;
+  line-height: 1.6 !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+}
+
+.footer-title {
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 15px !important;
+  border-bottom: 2px solid #5a3d3d;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li {
+  margin: 0 !important;
+}
+
+.footer-links a {
+  color: #e0e0e0 !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s ease !important;
+  padding: 5px 0 !important;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #d4af37 !important;
+  padding-left: 8px !important;
+  transform: translateX(5px) !important;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: #e0e0e0 !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  padding: 8px 16px !important;
+  border: 2px solid #3d2a2a !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  background-color: #2a1a1a !important;
+}
+
+.social-link:hover {
+  color: #ffffff !important;
+  border-color: #5a3d3d !important;
+  background-color: #3d2a2a !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(90, 61, 61, 0.3) !important;
+}
+
+.footer-bottom {
+  background-color: #0d0d0d !important;
+  border-top: 1px solid #2a1a1a !important;
+  padding: 20px 30px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  color: #888888 !important;
+  font-size: 0.9rem !important;
+  margin: 0 !important;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: #888888 !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  transition: color 0.3s ease !important;
+}
+
+.footer-bottom-links a:hover {
+  color: #d4af37 !important;
+}
+
+.separator {
+  color: #555555 !important;
+  font-size: 0.9rem !important;
+}
+
+/* Responsive Design */
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 15px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 15px !important;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-bottom-links {
+    justify-content: center;
+  }
+  
+  div[style*="backgroundColor"][style*="black"] {
+    padding: 15px !important;
+  }
+  
+  div[style*="display: flex"][style*="justifyContent: space-between"] {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+  
+  div[style*="display: flex"][style*="justifyContent: space-between"] h1 {
+    font-size: 2rem !important;
+    text-align: center !important;
+  }
+  
+  nav {
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 15px !important;
+  }
+  
+  form {
+    margin: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .note {
+    max-width: 100% !important;
+    margin: 20px 0 40px 0 !important;
+  }
+  
+  .note button {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a3d3d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b4a4a;
+}
